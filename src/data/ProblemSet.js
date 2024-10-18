@@ -117,7 +117,7 @@ const ProblemSetData = [{
         { word: 'piu mosso', mean : ['더 움직임을 가지고'] },
         { word: 'retenuto', mean : ['갑작스럽게 앞부분보다 느려지게'] },
     ],
-}, {
+},/* {
     id: 3,
     title: '용어3',
     dictionary: [
@@ -127,6 +127,6 @@ const ProblemSetData = [{
         { word: 'word4', mean : ['설명4'] },
         { word: 'word5', mean : ['설명5'] },
     ],
-}];
+}*/];
 
 export { ProblemSetData };

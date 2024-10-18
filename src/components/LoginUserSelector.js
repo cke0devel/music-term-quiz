@@ -5,8 +5,6 @@ import { useRouter } from 'next/navigation';
 
 const users = [{
     name: 'User1'
-}, {
-    name: 'User2'
 }];
 
 export default function LoginUserSelector() {
