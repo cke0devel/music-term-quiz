@@ -1,6 +1,6 @@
 const ProblemSetData = [{
     id: 1,
-    title: '용어1',
+    title: '표정을 나타내는 용어',
     dictionary: [
         { word: 'animato', mean : ['생기있게'] },
         { word: 'amabile', mean : ['사랑스럽게'] },
@@ -72,7 +72,7 @@ const ProblemSetData = [{
     ],
 }, {
     id: 2,
-    title: '용어2',
+    title: '빠르기를 나타내는 말',
     dictionary: [
         { word: 'accelerando(accel.)', mean : ['점점 빠르게'] },
         { word: 'stringendo(string.)', mean : ['점점 빠르게'] },

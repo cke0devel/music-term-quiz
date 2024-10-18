@@ -16,11 +16,11 @@ export default function UserAnswerCard({ data }) {
 
     const isCorrect = data.mean.includes(data.answer);
 
-    let className = 'text-2xl border rounded-lg p-10 shadow-lg';
+    let className = 'text-2xl border rounded-lg p-10 shadow-md w-full text-center';
     if (isCorrect) {
-        className += ' shadow-green-300 bg-green-100';
+        className += ' shadow-green-300 bg-green-50';
     } else {
-        className += ' shadow-red-300 bg-red-100';
+        className += ' shadow-red-300 bg-red-50';
     }
 
     let userAnswerClassName = 'text-xs md:text-sm';
@@ -30,13 +30,13 @@ export default function UserAnswerCard({ data }) {
 
     return (
         <ReactCardFlip isFlipped={isFlipped} infinite={true}>
-            <div className="mt-16 flex items-center justify-center cursor-pointer" onClick={flipCard}>
+            <div className="mt-16 flex items-center justify-center cursor-pointer w-full" onClick={flipCard}>
                 <div className={className}>
                     <span className={font.className}>{ data.word }</span>
                 </div>
             </div>
 
-            <div className="mt-16 flex items-center justify-center cursor-pointer" onClick={flipCard}>
+            <div className="mt-16 flex items-center justify-center cursor-pointer w-full" onClick={flipCard}>
                 <div className={className}>
                     <div>{ data.mean[0] }</div>
                     <div className={userAnswerClassName}>{ data.answer }</div>

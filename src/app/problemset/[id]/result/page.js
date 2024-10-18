@@ -13,6 +13,11 @@ export default function Result() {
     const userAnswerData = JSON.parse(window.sessionStorage.getItem('userAnswerData'));
     const problemData = ProblemSetData.find((set) => set.id == params.id);
 
+    const totalCnt = problemData.dictionary.length;
+    const isCorrect = (answer) => answer.mean.includes(answer.answer);
+    const numOfCorrect = userAnswerData.filter(isCorrect).length;
+    const points = parseInt(numOfCorrect*100 / totalCnt);
+
     const answerCards = userAnswerData.map((row, idx) =>
         <UserAnswerCard data={row} key={idx} />
     );
@@ -23,7 +28,11 @@ export default function Result() {
                 <div className="text-4xl font-semibold">{ problemData.title }</div>
             </div>
 
-            <div className="md:grid md:grid-cols-5 mt-10">
+            <div className="flex w-full justify-center mt-5">
+                전체 : {totalCnt} 개<br/>점수 : {points} 점({numOfCorrect}/{totalCnt})
+            </div>
+
+            <div className="md:grid md:grid-cols-2 md:gap-x-10 mx-10">
                 {answerCards}
             </div>
 
